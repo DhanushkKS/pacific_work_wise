@@ -8,6 +8,6 @@ public class Employee:BaseEntity
     public DateTime DateOfBirth { get; set; }
     public decimal Salary { get; set; }
     public Guid DepartmentId { get; set; }     
-    public int Age => DateTime.Now.Year - DateOfBirth.Year;
+    public int Age { get; set; }
     
 }

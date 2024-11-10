@@ -35,6 +35,7 @@ public class EmployeeService:IEmployeeService
             LastName = employee.LastName,
             Email = employee.Email,
             DateOfBirth = employee.DateOfBirth,
+            Age = employee.Age,
             Salary = employee.Salary,
             DepartmentId = employee.DepartmentId
         };
@@ -50,6 +51,7 @@ public class EmployeeService:IEmployeeService
             LastName = employee.LastName,
             Email = employee.Email,
             DateOfBirth = employee.DateOfBirth,
+            Age = employee.Age,
             Salary = employee.Salary,
             DepartmentId = employee.DepartmentId
         };

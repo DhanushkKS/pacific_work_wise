@@ -8,4 +8,5 @@ public class EmployeeDto
     public DateTime DateOfBirth { get; set; }
     public decimal Salary { get; set; }
     public Guid DepartmentId { get; set; }
+    public int Age => DateTime.Now.Year - DateOfBirth.Year - (DateTime.Now < DateOfBirth.AddYears(DateTime.Now.Year - DateOfBirth.Year) ? 1 : 0);
 }

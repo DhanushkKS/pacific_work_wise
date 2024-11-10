@@ -31,6 +31,7 @@ public class EmployeeRepository:IEmployeeRepository
                 FirstName = reader["FirstName"].ToString(),
                 LastName = reader["LastName"].ToString(),
                 Email = reader["Email"].ToString(),
+                Age = Convert.ToInt32(reader["Age"]),
                 DateOfBirth = (DateTime)reader["DateOfBirth"],
                 Salary = (decimal)reader["Salary"],
                 DepartmentId = (Guid)reader["DepartmentId"]
@@ -45,7 +46,7 @@ public class EmployeeRepository:IEmployeeRepository
         employee.Id = Guid.NewGuid();
         using var connection = new SqlConnection(_connectionString);
         var command = new SqlCommand(
-            "INSERT INTO Employees (Id, FirstName, LastName, Email, DateOfBirth, Salary, DepartmentId) OUTPUT INSERTED.Id VALUES (@id, @firstName, @lastName, @Email, @dob, @salary, @deptId)", 
+            "INSERT INTO Employees (Id, FirstName, LastName, Email, DateOfBirth,Age, Salary, DepartmentId) OUTPUT INSERTED.Id VALUES (@id, @firstName, @lastName, @Email, @dob,@age, @salary, @deptId)", 
             connection
         );
         command.Parameters.AddWithValue("@id", employee.Id);
@@ -53,6 +54,7 @@ public class EmployeeRepository:IEmployeeRepository
         command.Parameters.AddWithValue("@lastName", employee.LastName);
         command.Parameters.AddWithValue("@Email", employee.Email);
         command.Parameters.AddWithValue("@dob", employee.DateOfBirth);
+        command.Parameters.AddWithValue("@age", employee.Age);
         command.Parameters.AddWithValue("@salary", employee.Salary);
         command.Parameters.AddWithValue("@deptId", employee.DepartmentId);
         connection.Open();
@@ -63,7 +65,7 @@ public class EmployeeRepository:IEmployeeRepository
     {
         using var connection = new SqlConnection(_connectionString);
         var command = new SqlCommand(
-            "UPDATE Employees SET FirstName = @firstName, LastName = @lastName, Email = @Email, DateOfBirth = @dob, Salary = @salary, DepartmentId = @deptId WHERE EmployeeId = @id", 
+            "UPDATE Employees SET FirstName = @firstName, LastName = @lastName, Email = @Email, DateOfBirth = @dob,Age=@age, Salary = @salary, DepartmentId = @deptId WHERE EmployeeId = @id", 
             connection
         );
 
@@ -72,6 +74,7 @@ public class EmployeeRepository:IEmployeeRepository
         command.Parameters.AddWithValue("@lastName", employee.LastName);
         command.Parameters.AddWithValue("@Email", employee.Email);
         command.Parameters.AddWithValue("@dob", employee.DateOfBirth);
+        command.Parameters.AddWithValue("@age", employee.Age);
         command.Parameters.AddWithValue("@salary", employee.Salary);
         command.Parameters.AddWithValue("@deptId", employee.DepartmentId);
         connection.Open();

@@ -1,0 +1,6 @@
+@WorkWise.Presentation_HostAddress = http://localhost:5116
+
+GET {{WorkWise.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

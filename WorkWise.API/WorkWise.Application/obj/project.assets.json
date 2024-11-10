@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "WorkWise.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/WorkWise.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WorkWise.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WorkWise.Domain/1.0.0": {
+      "type": "project",
+      "path": "../WorkWise.Domain/WorkWise.Domain.csproj",
+      "msbuildProject": "../WorkWise.Domain/WorkWise.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "WorkWise.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ksdha\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\projects\\pacificKode\\WorkWise.API\\WorkWise.Domain\\WorkWise.Domain.csproj": {
+              "projectPath": "D:\\projects\\pacificKode\\WorkWise.API\\WorkWise.Domain\\WorkWise.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

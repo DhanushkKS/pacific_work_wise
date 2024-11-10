@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\WorkWise.Domain\WorkWise.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

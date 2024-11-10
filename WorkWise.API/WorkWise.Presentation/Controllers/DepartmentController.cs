@@ -20,7 +20,7 @@ public class DepartmentController:ApiBaseController
     }
 
     [HttpPost]
-    public ActionResult<int> AddEmployee([FromBody] DepartmentDto department)
+    public ActionResult<int> Create([FromBody] DepartmentDto department)
     {
         var id = _departmentService.Create(department);
         return CreatedAtAction(nameof(GetAll), new { id }, department);
@@ -34,7 +34,7 @@ public class DepartmentController:ApiBaseController
     }
 
     [HttpDelete("{id:guid}")]
-    public IActionResult DeleteEmployee([FromRoute] Guid id)
+    public IActionResult Delete([FromRoute] Guid id)
     {
         _departmentService.Delete(id);
         return NoContent();

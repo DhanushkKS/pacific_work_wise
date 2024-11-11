@@ -1,5 +1,6 @@
-import { Box, Button, Grid, Grid2, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Grid2, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import { paths } from "../../paths.ts";
 
 const Home = () => {
   return (
@@ -53,10 +54,20 @@ const Home = () => {
             alignItems="center"
             justifyContent="center"
           >
-            <Button variant="contained" color="secondary">
+            <Button
+              component={Link}
+              to={paths.departments.index}
+              variant="contained"
+              color="secondary"
+            >
               Manage Departments
             </Button>
-            <Button variant="contained" color="primary">
+            <Button
+              component={Link}
+              to={paths.employees.index}
+              variant="contained"
+              color="primary"
+            >
               Manage Employees
             </Button>
           </Grid2>

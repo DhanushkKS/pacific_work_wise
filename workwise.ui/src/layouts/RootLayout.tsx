@@ -15,7 +15,6 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         justifyContent="center"
         sx={{
           background: "linear-gradient(to right, #e0eafc, #cfdef3)",
-          border: "solid 1px",
         }}
       >
         <Box

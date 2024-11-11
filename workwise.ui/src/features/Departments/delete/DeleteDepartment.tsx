@@ -25,7 +25,6 @@ const DeleteDepartment = ({ id }: DeleteDepartmentProps) => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-          // sx={{ border: "solid 1px" }}
         >
           <DialogTitle variant="h5" mt={2}>
             Are you sure to delete department?
@@ -39,7 +38,6 @@ const DeleteDepartment = ({ id }: DeleteDepartmentProps) => {
             mb={4}
             display="flex"
             justifyContent="center"
-            // sx={{ border: "solid 1px" }}
           >
             <Button
               onClick={handleClose}

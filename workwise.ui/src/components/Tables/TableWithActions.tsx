@@ -69,7 +69,14 @@ const TableWithActions = ({
                       </TableCell>
                     );
                   })}
-                  <TableCell align="center">
+                  <TableCell
+                    align="center"
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      columnGap: 2,
+                    }}
+                  >
                     <>
                       <ActionButton
                         component={

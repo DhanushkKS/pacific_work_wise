@@ -10,6 +10,8 @@ import TableRow from "@mui/material/TableRow";
 import UpdateDepartment from "../../features/Departments/update";
 import DeleteDepartment from "../../features/Departments/delete/DeleteDepartment.tsx";
 import { ActionButton } from "./ActionButtons.tsx";
+import UpdateEmployee from "../../features/Employee/update";
+import DeleteEmployee from "../../features/Employee/delete/DeleteEmployee.tsx";
 
 type TablewithActionsProps = {
   rows: any;
@@ -83,7 +85,7 @@ const TableWithActions = ({
                           entityType === "dep" ? (
                             <UpdateDepartment id={row.id} />
                           ) : entityType === "emp" ? (
-                            <>update emp</>
+                            <UpdateEmployee id={row.id} />
                           ) : null
                         }
                       />
@@ -95,7 +97,7 @@ const TableWithActions = ({
                           entityType === "dep" ? (
                             <DeleteDepartment id={row.id} />
                           ) : entityType === "emp" ? (
-                            <>delete emp</>
+                            <DeleteEmployee id={row.id} />
                           ) : null
                         }
                       />

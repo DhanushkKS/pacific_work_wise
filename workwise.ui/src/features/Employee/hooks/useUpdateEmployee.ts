@@ -2,9 +2,9 @@ import { useFormik } from "formik";
 import generateInputField from "../../../helpers/generateInputField.tsx";
 import { useGetAllDepartmentsQuery } from "../../../redux/department/api.ts";
 import { formDetails } from "../common/formDetails.ts";
-import { useCreateEmployeeMutation } from "../../../redux/employee/api.ts";
+import { useUpdateEmployeeMutation } from "../../../redux/employee/api.ts";
 
-const useCreateEmployee = () => {
+const useUpdateEmployee = (id: string) => {
   const { data } = useGetAllDepartmentsQuery({});
   const departments = data;
   const renderInputField = (field: (typeof formDetails)[number]) => {
@@ -17,7 +17,7 @@ const useCreateEmployee = () => {
     return generateInputField(item, formik, options);
   };
 
-  const [createEmployee, { isLoading }] = useCreateEmployeeMutation();
+  const [updateEmployee, { isLoading }] = useUpdateEmployeeMutation();
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -29,11 +29,11 @@ const useCreateEmployee = () => {
     },
 
     onSubmit: async (values) => {
-      await createEmployee(values);
+      await updateEmployee({ id: id, employee: values });
     },
   });
   const { handleSubmit, handleChange } = formik;
 
   return { handleChange, handleSubmit, renderInputField, isLoading };
 };
-export default useCreateEmployee;
+export default useUpdateEmployee;

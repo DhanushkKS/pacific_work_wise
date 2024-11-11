@@ -1,6 +1,5 @@
 import { column, rowData } from "../types/types.ts";
 import { useNavigate } from "react-router-dom";
-import { useGetAllDepartmentsQuery } from "../../../redux/department/api.ts";
 import { useGetAllEmployeesQuery } from "../../../redux/employee/api.ts";
 
 const useEmployees = () => {

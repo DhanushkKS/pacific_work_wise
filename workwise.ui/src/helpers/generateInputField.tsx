@@ -1,39 +1,34 @@
 import TextField from "@mui/material/TextField";
 import { INPUT_TYPES } from "../constants.ts";
 import { Box, Chip, MenuItem } from "@mui/material";
-import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { DatePicker } from "@mui/x-date-pickers";
 import dateChangeHandler from "./dateChange.ts";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 const generateInputField = (input, formik, options = [], maxDate) => {
   if (input.type === INPUT_TYPES.DATE) {
     return (
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DatePicker
-          key={input.key}
-          label={input.label}
-          name={input.name}
-          value={formik.values[input.name]}
-          maxDate={maxDate}
-          disabled={input.disabled}
-          onChange={(newValue) =>
-            dateChangeHandler(formik, newValue, input.name)
-          }
-          renderInput={(params) => (
-            <TextField
-              required={input.required}
-              fullWidth
-              {...params}
-              error={formik.errors[input.name] && formik.touched[input.name]}
-              helperText={
-                formik.errors[input.name] &&
-                formik.touched[input.name] &&
-                formik.errors[input.name]
-              }
-            />
-          )}
-        />
-      </LocalizationProvider>
+      <DatePicker
+        key={input.key}
+        label={input.label}
+        name={input.name}
+        value={formik.values[input.name]}
+        maxDate={maxDate}
+        disabled={input.disabled}
+        onChange={(newValue) => dateChangeHandler(formik, newValue, input.name)}
+        renderInput={(params) => (
+          <TextField
+            required={input.required}
+            fullWidth
+            {...params}
+            error={formik.errors[input.name] && formik.touched[input.name]}
+            helperText={
+              formik.errors[input.name] &&
+              formik.touched[input.name] &&
+              formik.errors[input.name]
+            }
+          />
+        )}
+      />
     );
   }
 

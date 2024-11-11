@@ -1,11 +1,6 @@
 import { RouteObject } from "react-router-dom";
 import { Suspense } from "react";
-import {
-  CreateDepartment,
-  Departments,
-  Employees,
-  HomePage,
-} from "./routeElements.ts";
+import { Departments, Employees, HomePage } from "./routeElements.ts";
 
 export const routes: RouteObject[] = [
   {

@@ -14,8 +14,10 @@ export const departmentsApi = createApi({
   endpoints: (builder) => ({
     //getAll
     getAllDepartments: builder.query({
-      query: () => ({ url: `${DEPARTMENTS}`, providesTags: [TAGS.DEPARTMENT] }),
+      query: () => `${DEPARTMENTS}`,
+      providesTags: [TAGS.DEPARTMENT],
     }),
+
     getDepartmentById: builder.query({
       query: ({ id }) => ({
         url: `${DEPARTMENTS}/${id}`,
@@ -57,6 +59,7 @@ export const departmentsApi = createApi({
 });
 export const {
   useGetAllDepartmentsQuery,
+  useGetDepartmentByIdQuery,
   useCreateDepartmentMutation,
   useUpdateDepartmentMutation,
   useDeleteDepartmentMutation,

@@ -4,9 +4,9 @@ import { Grid } from "@mui/material";
 import PrimaryDetailsContainer from "../../../components/Forms/PrimaryDetailsContainer.tsx";
 import useUpdateDepartment from "../hooks/useUpdateDepartment.ts";
 
-const UpdateDepartment = () => {
+const UpdateDepartment = ({ id }) => {
   const { renderInputField, handleSubmit, handleChange } =
-    useUpdateDepartment();
+    useUpdateDepartment(id);
   return (
     <>
       <FormModal buttonTitle="Update">

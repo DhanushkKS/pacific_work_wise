@@ -4,7 +4,7 @@ import useDepartments from "./hooks/useDepartments.ts";
 import CreateDepartment from "./create";
 
 const Departments = () => {
-  const { columns, rows, handleEdit, handleDelete } = useDepartments();
+  const { columns, rows } = useDepartments();
   return (
     <RootLayout>
       {/*  create*/}
@@ -13,8 +13,9 @@ const Departments = () => {
       <TableWithActions
         rows={rows}
         columns={columns}
-        onDelete={handleDelete}
-        onEdit={handleEdit}
+        entityType="dep"
+        // onDelete={handleDelete}
+        // onEdit={handleEdit}
       />
     </RootLayout>
   );

@@ -9,11 +9,13 @@ type PrimaryDetailsContainerProps = {
   onSubmit: () => void; // or (event: React.FormEvent<HTMLFormElement>) => void, if it’s used as a form handler
   title: string;
   children: ReactNode;
+  isLoading?: boolean;
 };
 
 const PrimaryDetailsContainer = ({
   onSubmit,
   title,
+  isLoading,
   children,
 }: PrimaryDetailsContainerProps) => {
   return (
@@ -32,7 +34,7 @@ const PrimaryDetailsContainer = ({
             display="flex"
             justifyContent="flex-end"
           >
-            <Button type="submit" variant="contained">
+            <Button type="submit" variant="contained" disabled={isLoading}>
               {title}
             </Button>
           </Grid>

@@ -3,14 +3,19 @@ import { Grid } from "@mui/material";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
 import { useState } from "react";
+import { useDeleteDepartmentMutation } from "../../../redux/department/api.ts";
 
-const DeleteDepartment = () => {
+type DeleteDepartmentProps = { id: string };
+const DeleteDepartment = ({ id }: DeleteDepartmentProps) => {
   const [open, setOpen] = useState(false);
+  const [deleteDepartment] = useDeleteDepartmentMutation();
 
   const handleClose = () => {
     setOpen(false);
   };
-
+  const handleDeleteDepartment = async () => {
+    await deleteDepartment(id);
+  };
   return (
     <>
       <FormModal buttonTitle="Delete" onClose={handleClose}>
@@ -44,7 +49,12 @@ const DeleteDepartment = () => {
             >
               No
             </Button>
-            <Button type="submit" variant="outlined" color="error">
+            <Button
+              type="submit"
+              variant="outlined"
+              color="error"
+              onClick={handleDeleteDepartment}
+            >
               Yes
             </Button>
           </Grid>

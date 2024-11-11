@@ -9,8 +9,19 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import UpdateDepartment from "../../features/Departments/update";
 import DeleteDepartment from "../../features/Departments/delete/DeleteDepartment.tsx";
+import { ActionButton } from "./ActionButtons.tsx";
 
-const TableWithActions = ({ rows, columns, onEdit, onDelete }) => {
+type TablewithActionsProps = {
+  rows: any;
+  columns: any;
+  entityType?: "dep" | "emp";
+};
+
+const TableWithActions = ({
+  rows,
+  columns,
+  entityType,
+}: TablewithActionsProps) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -59,25 +70,28 @@ const TableWithActions = ({ rows, columns, onEdit, onDelete }) => {
                     );
                   })}
                   <TableCell align="center">
-                    {/*<IconButton*/}
-                    {/*  color="primary"*/}
-                    {/*  onClick={() => onEdit(row.id)}*/}
-                    {/*  aria-label="edit"*/}
-                    {/*>*/}
-                    {/*  <EditIcon />*/}
-                    {/*</IconButton>*/}
                     <>
-                      <UpdateDepartment />
+                      <ActionButton
+                        component={
+                          entityType === "dep" ? (
+                            <UpdateDepartment id={row.id} />
+                          ) : entityType === "emp" ? (
+                            <>update emp</>
+                          ) : null
+                        }
+                      />
                     </>
-                    {/*<IconButton*/}
-                    {/*  color="secondary"*/}
-                    {/*  onClick={() => onDelete(row.id)}*/}
-                    {/*  aria-label="delete"*/}
-                    {/*>*/}
-                    {/*  <DeleteIcon />*/}
-                    {/*</IconButton>*/}
+
                     <>
-                      <DeleteDepartment />
+                      <ActionButton
+                        component={
+                          entityType === "dep" ? (
+                            <DeleteDepartment id={row.id} />
+                          ) : entityType === "emp" ? (
+                            <>delete emp</>
+                          ) : null
+                        }
+                      />
                     </>
                   </TableCell>
                 </TableRow>

@@ -10,6 +10,8 @@ import TableRow from "@mui/material/TableRow";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import UpdateDepartment from "../../features/Departments/update";
+import DeleteDepartment from "../../features/Departments/delete/DeleteDepartment.tsx";
 
 const TableWithActions = ({ rows, columns, onEdit, onDelete }) => {
   const [page, setPage] = React.useState(0);
@@ -60,20 +62,26 @@ const TableWithActions = ({ rows, columns, onEdit, onDelete }) => {
                     );
                   })}
                   <TableCell align="center">
-                    <IconButton
-                      color="primary"
-                      onClick={() => onEdit(row.id)}
-                      aria-label="edit"
-                    >
-                      <EditIcon />
-                    </IconButton>
-                    <IconButton
-                      color="secondary"
-                      onClick={() => onDelete(row.id)}
-                      aria-label="delete"
-                    >
-                      <DeleteIcon />
-                    </IconButton>
+                    {/*<IconButton*/}
+                    {/*  color="primary"*/}
+                    {/*  onClick={() => onEdit(row.id)}*/}
+                    {/*  aria-label="edit"*/}
+                    {/*>*/}
+                    {/*  <EditIcon />*/}
+                    {/*</IconButton>*/}
+                    <>
+                      <UpdateDepartment />
+                    </>
+                    {/*<IconButton*/}
+                    {/*  color="secondary"*/}
+                    {/*  onClick={() => onDelete(row.id)}*/}
+                    {/*  aria-label="delete"*/}
+                    {/*>*/}
+                    {/*  <DeleteIcon />*/}
+                    {/*</IconButton>*/}
+                    <>
+                      <DeleteDepartment />
+                    </>
                   </TableCell>
                 </TableRow>
               ))}

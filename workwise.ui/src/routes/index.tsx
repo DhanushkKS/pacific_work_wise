@@ -1,6 +1,11 @@
 import { RouteObject } from "react-router-dom";
 import { Suspense } from "react";
-import { CreateDepartment, Departments, HomePage } from "./routeElements.ts";
+import {
+  CreateDepartment,
+  Departments,
+  Employees,
+  HomePage,
+} from "./routeElements.ts";
 
 export const routes: RouteObject[] = [
   {
@@ -22,21 +27,19 @@ export const routes: RouteObject[] = [
           </Suspense>
         ),
       },
-      {
-        path: "new",
-        element: (
-          <Suspense>
-            <CreateDepartment />
-          </Suspense>
-        ),
-      },
-      { path: "update/:id", element: <>update</> },
     ],
   },
   {
     path: "employees",
     children: [
-      { index: true, element: <>All emp</> },
+      {
+        index: true,
+        element: (
+          <Suspense>
+            <Employees />
+          </Suspense>
+        ),
+      },
       { path: "new", element: <>New emp</> },
       { path: "update/:id", element: <>update</> },
     ],

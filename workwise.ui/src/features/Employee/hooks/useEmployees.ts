@@ -1,9 +1,10 @@
 import { column, rowData } from "../types/types.ts";
 import { useNavigate } from "react-router-dom";
 import { useGetAllDepartmentsQuery } from "../../../redux/department/api.ts";
+import { useGetAllEmployeesQuery } from "../../../redux/employee/api.ts";
 
-const useDepartments = () => {
-  const { data } = useGetAllDepartmentsQuery({});
+const useEmployees = () => {
+  const { data } = useGetAllEmployeesQuery({});
   console.log("All depts", data);
   const navigate = useNavigate();
   const columns: column[] = [
@@ -27,4 +28,4 @@ const useDepartments = () => {
 
   return { columns, rows };
 };
-export default useDepartments;
+export default useEmployees;

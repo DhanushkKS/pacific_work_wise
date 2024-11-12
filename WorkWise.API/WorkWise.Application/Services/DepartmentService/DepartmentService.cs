@@ -12,12 +12,12 @@ public class DepartmentService: IDepartmentService
     {
         _departmentRepository = departmentRepository;
     }
-
-    public IEnumerable<DepartmentDto> GetAll()
+    public IEnumerable<DepartmentDisplayDto> GetAll()
     {
         var departments = _departmentRepository.GetAll();
-        return departments.Select(d => new DepartmentDto
+        return departments.Select(d => new DepartmentDisplayDto()
         {
+            Id = d.Id,
             Code = d.Code,
             Name = d.Name,
         });

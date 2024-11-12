@@ -4,7 +4,9 @@ namespace WorkWise.Application.Services.EmployeeService;
 
 public interface IEmployeeService
 {
-    IEnumerable<EmployeeDto> GetAll();
+    IEnumerable<EmployeeDisplayDto> GetAll();
+    
+    EmployeeDisplayDto GetById(Guid id);
     Guid Create(EmployeeDto employee);
     void Update(Guid id, EmployeeDto employee);
     void Delete(Guid id);

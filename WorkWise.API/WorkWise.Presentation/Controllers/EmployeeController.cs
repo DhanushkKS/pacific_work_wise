@@ -14,9 +14,15 @@ public class EmployeeController:ApiBaseController
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<EmployeeDto>> GetEmployees()
+    public ActionResult<IEnumerable<EmployeeDisplayDto>> GetEmployees()
     {
         return Ok(_employeeService.GetAll());
+    }
+
+    [HttpGet("{id:guid}")]
+    public ActionResult<EmployeeDisplayDto> GetEmployee([FromRoute] Guid id)
+    {
+        return Ok(_employeeService.GetById(id));
     }
 
     [HttpPost]

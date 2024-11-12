@@ -23,6 +23,17 @@ public class DepartmentService: IDepartmentService
         });
     }
 
+    public DepartmentDisplayDto GetById(Guid id)
+    {
+        var departmentEntity = _departmentRepository.GetById(id);
+        return new DepartmentDisplayDto
+        {
+            Id = departmentEntity.Id,
+            Code = departmentEntity.Code,
+            Name = departmentEntity.Name,
+        };
+    }
+
     public Guid Create(DepartmentDto department)
     {
         var departmentEntity = new Department

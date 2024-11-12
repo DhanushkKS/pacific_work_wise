@@ -13,18 +13,37 @@ public class EmployeeService:IEmployeeService
         _employeeRepository = employeeRepository;
     }
 
-    public IEnumerable<EmployeeDto> GetAll()
+    public IEnumerable<EmployeeDisplayDto> GetAll()
     {
         var employees = _employeeRepository.GetAll();
-        return employees.Select(e => new EmployeeDto
+        return employees.Select(e => new EmployeeDisplayDto()
         {
+            Id = e.Id,
             FirstName = e.FirstName, 
             LastName = e.LastName,
             Email = e.Email,
             DateOfBirth = e.DateOfBirth,
+            Age = e.Age,
             Salary = e.Salary,
             DepartmentId = e.DepartmentId
         });
+    }
+
+    public EmployeeDisplayDto GetById(Guid id)
+    {
+        var employeeEntity = _employeeRepository.GetById(id);
+        return new EmployeeDisplayDto
+        {
+                Id = employeeEntity.Id,
+                FirstName = employeeEntity.FirstName,
+                LastName = employeeEntity.LastName,
+                Email = employeeEntity.Email,
+                DateOfBirth = employeeEntity.DateOfBirth,
+                Age = employeeEntity.Age,
+                Salary = employeeEntity.Salary,
+                DepartmentId = employeeEntity.DepartmentId,
+        };
+
     }
 
     public Guid Create(EmployeeDto employee)

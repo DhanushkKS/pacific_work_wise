@@ -7,23 +7,17 @@ const useEmployees = () => {
   console.log("All depts", data);
   const navigate = useNavigate();
   const columns: column[] = [
-    {
-      id: "id",
-      label: "Id",
-    },
-    { id: "name", label: "Name" },
-    { id: "code", label: "Code" },
-    // { id: "actions", label: "Actions" },
+    { id: "id", label: "Id" },
+    { id: "firstName", label: "First Name" },
+    { id: "lastName", label: "Last Name" },
+    { id: "email", label: "Email" },
+    { id: "dateOfBirth", label: "Date of Birth" },
+    { id: "age", label: "Age" },
+    { id: "departmentId", label: "Department Id" },
   ];
-
+  const employeeData: rowData[] = data;
   //TODO: Rows should be removed when fetch real data from api
-  const rows: rowData[] = [
-    {
-      id: "deferdfe",
-      code: "cs",
-      name: "CS dep",
-    },
-  ];
+  const rows: rowData[] = employeeData;
 
   return { columns, rows };
 };

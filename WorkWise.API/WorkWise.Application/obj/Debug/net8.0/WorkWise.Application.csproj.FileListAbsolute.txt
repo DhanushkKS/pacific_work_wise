@@ -1,0 +1,16 @@
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\bin\Debug\net8.0\WorkWise.Application.deps.json
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\bin\Debug\net8.0\WorkWise.Application.dll
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\bin\Debug\net8.0\WorkWise.Application.pdb
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\bin\Debug\net8.0\WorkWise.Domain.dll
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\bin\Debug\net8.0\WorkWise.Domain.pdb
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.Application.csproj.AssemblyReference.cache
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.Application.AssemblyInfoInputs.cache
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.Application.AssemblyInfo.cs
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.Application.csproj.CoreCompileInputs.cache
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.Application.sourcelink.json
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.4B7D91F0.Up2Date
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.Application.dll
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\refint\WorkWise.Application.dll
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\WorkWise.Application.pdb
+D:\projects\pacificKode\WorkWise.API\WorkWise.Application\obj\Debug\net8.0\ref\WorkWise.Application.dll

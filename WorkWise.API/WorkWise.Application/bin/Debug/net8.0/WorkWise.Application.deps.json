@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "WorkWise.Application/1.0.0": {
+        "dependencies": {
+          "WorkWise.Domain": "1.0.0"
+        },
+        "runtime": {
+          "WorkWise.Application.dll": {}
+        }
+      },
+      "WorkWise.Domain/1.0.0": {
+        "runtime": {
+          "WorkWise.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WorkWise.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WorkWise.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

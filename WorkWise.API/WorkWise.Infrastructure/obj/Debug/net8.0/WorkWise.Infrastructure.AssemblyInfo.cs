@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkWise.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+691351e1df6eab80bfe1886fd59c19560982fb61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+425d490eb2d6857a6459c50d23852d0f53cd2f78")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkWise.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkWise.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

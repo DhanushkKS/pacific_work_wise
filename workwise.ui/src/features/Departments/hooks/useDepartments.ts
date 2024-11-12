@@ -4,10 +4,7 @@ import { useGetAllDepartmentsQuery } from "../../../redux/department/api.ts";
 const useDepartments = () => {
   const { data } = useGetAllDepartmentsQuery({});
   const columns: column[] = [
-    {
-      id: "id",
-      label: "Id",
-    },
+    { id: "id", label: "Id" },
     { id: "name", label: "Name" },
     { id: "code", label: "Code" },
   ];

@@ -1,7 +1,7 @@
 import TextField from "@mui/material/TextField";
 import { INPUT_TYPES } from "../constants.ts";
 import { Box, Chip, MenuItem } from "@mui/material";
-import { DatePicker, DesktopDatePicker } from "@mui/x-date-pickers";
+import { DatePicker } from "@mui/x-date-pickers";
 import dateChangeHandler from "./dateChange.ts";
 
 const generateInputField = (input, formik, options = [], maxDate) => {

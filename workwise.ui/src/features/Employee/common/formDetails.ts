@@ -37,6 +37,7 @@ export const formDetails = [
     name: "dateOfBirth",
     label: "Date of Birth",
     type: INPUT_TYPES.DATE,
+    disabled: true,
     required: true,
     xs: 12,
     sm: 12,

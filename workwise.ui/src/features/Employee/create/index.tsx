@@ -16,7 +16,6 @@ const CreateEmployee = () => {
         >
           <Grid container spacing={0} mt={2} gap={4}>
             {formDetails.map(({ xs, md, sm, ...item }) => (
-              //TODO: This should be wrapped with grid2
               <Grid key={item.key} xs={xs} sm={sm} md={md} component="div">
                 {renderInputField(item)}
               </Grid>

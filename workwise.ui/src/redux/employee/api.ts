@@ -20,7 +20,7 @@ export const employeesApi = createApi({
 
     // getEmployeeById
     getEmployeeById: builder.query({
-      query: (id: string) => ({
+      query: ({ id }) => ({
         url: `${EMPLOYEES}/${id}`,
       }),
       providesTags: [TAGS.EMPLOYEE],
@@ -54,7 +54,7 @@ export const employeesApi = createApi({
           firstName: string;
           lastName: string;
           email: string;
-          dateOfBirth: string;
+          dateOfBirth: string | null;
           salary: number;
           departmentId: string;
         };

@@ -11,7 +11,7 @@ const Employees = () => {
       <Grid container display="flex" mt={2} columnGap={10} rowGap={4} p={2}>
         <Typography variant="h5">All Employees</Typography>
         <CreateEmployee />
-        <TableWithActions rows={rows} columns={columns} entityType="dep" />
+        <TableWithActions rows={rows} columns={columns} entityType="emp" />
       </Grid>
     </RootLayout>
   );

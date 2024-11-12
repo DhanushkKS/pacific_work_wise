@@ -4,6 +4,7 @@ import PrimaryDetailsContainer from "../../../components/Forms/PrimaryDetailsCon
 import { Grid } from "@mui/material";
 import { formDetails } from "../common/formDetails.ts";
 
+//TODO: Same component in Create and Update. Should refactor later to common component...
 const UpdateEmployee = ({ id }) => {
   const { renderInputField, handleSubmit, handleChange } =
     useUpdateEmployee(id);
@@ -13,7 +14,6 @@ const UpdateEmployee = ({ id }) => {
         <PrimaryDetailsContainer onSubmit={handleSubmit} title="Update">
           <Grid container spacing={0} mt={2} gap={4}>
             {formDetails.map(({ xs, md, sm, ...item }) => (
-              //TODO: This should be wrapped with grid2
               <Grid key={item.key} xs={xs} sm={sm} md={md} component="div">
                 {renderInputField(item)}
               </Grid>

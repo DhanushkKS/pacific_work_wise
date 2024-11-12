@@ -32,7 +32,7 @@ export const employeesApi = createApi({
         firstName: string;
         lastName: string;
         email: string;
-        dateOfBirth: string;
+        dateOfBirth: string | null;
         salary: number;
         departmentId: string;
       }) => ({

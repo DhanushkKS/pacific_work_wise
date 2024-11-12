@@ -1,7 +1,7 @@
 import TextField from "@mui/material/TextField";
 import { INPUT_TYPES } from "../constants.ts";
 import { Box, Chip, MenuItem } from "@mui/material";
-import { DatePicker } from "@mui/x-date-pickers";
+import { DatePicker, DesktopDatePicker } from "@mui/x-date-pickers";
 import dateChangeHandler from "./dateChange.ts";
 
 const generateInputField = (input, formik, options = [], maxDate) => {
@@ -11,7 +11,7 @@ const generateInputField = (input, formik, options = [], maxDate) => {
         key={input.key}
         label={input.label}
         name={input.name}
-        value={formik.values[input.name]}
+        value={formik.values[input.name] || null}
         maxDate={maxDate}
         disabled={input.disabled}
         onChange={(newValue) => dateChangeHandler(formik, newValue, input.name)}
@@ -38,6 +38,7 @@ const generateInputField = (input, formik, options = [], maxDate) => {
         ? formik.values[input.name]
         : []
       : formik.values[input.name];
+    console.log("oppp", options);
     return (
       <TextField
         key={input.key}

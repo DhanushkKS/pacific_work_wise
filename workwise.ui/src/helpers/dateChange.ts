@@ -6,4 +6,5 @@ const dateChangeHandler = (formik, newDate, name) => {
   const isoDate = `${year}-${month}-${day}`;
   formik.setFieldValue(`${name}`, isoDate);
 };
+
 export default dateChangeHandler;

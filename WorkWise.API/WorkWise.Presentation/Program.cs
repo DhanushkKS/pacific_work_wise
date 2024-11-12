@@ -33,15 +33,15 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseCors();
+    // app.UseCors();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowOrigin");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
-app.UseCors();
 app.Run();

@@ -10,3 +10,7 @@ export type rowData = {
   name: string;
   code: string;
 };
+export type Department = {
+  name: string;
+  code: string;
+};

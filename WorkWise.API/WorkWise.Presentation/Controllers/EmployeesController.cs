@@ -4,9 +4,8 @@ using WorkWise.Application.Services.EmployeeService;
 
 namespace WorkWise.Presentation.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class EmployeesController : ControllerBase
+
+public class EmployeesController : ApiBaseController
 {
     private readonly IEmployeeService _employeeService;
 

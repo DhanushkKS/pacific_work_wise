@@ -4,9 +4,8 @@ using WorkWise.Application.Services.DepartmentService;
 
 namespace WorkWise.Presentation.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class DepartmentsController : ControllerBase
+
+public class DepartmentsController : ApiBaseController
 {
     private readonly IDepartmentService _departmentService;
 

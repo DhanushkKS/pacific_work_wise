@@ -58,13 +58,13 @@ const TableWithActions = ({
           </TableHead>
           <TableBody>
             {rows
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => (
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
-                  {columns.map((column) => {
-                    const value = row[column.id];
+              ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              ?.map((row) => (
+                <TableRow hover role="checkbox" tabIndex={-1} key={row?.id}>
+                  {columns?.map((column) => {
+                    const value = row[column?.id];
                     return (
-                      <TableCell key={column.id} align={column.align}>
+                      <TableCell key={column?.id} align={column?.align}>
                         {column.format && typeof value === "number"
                           ? column.format(value)
                           : value}
@@ -111,7 +111,7 @@ const TableWithActions = ({
       <TablePagination
         rowsPerPageOptions={[10, 25, 100]}
         component="div"
-        count={rows.length}
+        count={rows?.length ?? 0}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}

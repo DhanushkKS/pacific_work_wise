@@ -77,41 +77,41 @@ Ensure you have the following software installed:
 The backend exposes RESTful endpoints for interacting with departments and employees.
 
 - **Departments**:
-  - `GET /api/departments`: Retrieve a list of all departments.
-  - `POST /api/departments`: Create a new department.
-  - `PUT /api/departments/{id}`: Update an existing department.
-  - `DELETE /api/departments/{id}`: Delete a department.
+  - `GET /api/v1/departments`: Retrieve a list of all departments.
+  - `POST /api/v1/departments`: Create a new department.
+  - `PUT /api/v1/departments/{id}`: Update an existing department.
+  - `DELETE /api/v1/departments/{id}`: Delete a department.
 
 - **Employees**:
-  - `GET /api/employees`: Retrieve a list of all employees.
-  - `POST /api/employees`: Create a new employee.
-  - `PUT /api/employees/{id}`: Update an existing employee.
-  - `DELETE /api/employees/{id}`: Delete an employee.
+  - `GET /api/v1/employees`: Retrieve a list of all employees.
+  - `POST /api/v1/employees`: Create a new employee.
+  - `PUT /api/v1/employees/{id}`: Update an existing employee.
+  - `DELETE /api/v1/employees/{id}`: Delete an employee.
 
 ## Screenshots
 
 ### Home Page
-![Home Page](path/to/home-page-screenshot.png)
+![Home Page](https://github.com/DhanushkKS/pacific_work_wise/blob/bf18faf7f7c9bd28cac52fcc9e1da8f7c505bced/workwise.ui/src/assets/screenshots/workwise_home.png)
 
 ### All Departments
-![All Departments](path/to/all-departments-screenshot.png)
+![All Departments](https://github.com/DhanushkKS/pacific_work_wise/blob/bf18faf7f7c9bd28cac52fcc9e1da8f7c505bced/workwise.ui/src/assets/screenshots/workwise_all_dpt.png)
 
 ### Create Department
-![Create Department](path/to/create-department-screenshot.png)
+![Create Department](https://github.com/DhanushkKS/pacific_work_wise/blob/bf18faf7f7c9bd28cac52fcc9e1da8f7c505bced/workwise.ui/src/assets/screenshots/workwise_add_dept.png)
 
 ### Update Department
-![Update Department](path/to/update-department-screenshot.png)
+![Update Department](https://github.com/DhanushkKS/pacific_work_wise/blob/bf18faf7f7c9bd28cac52fcc9e1da8f7c505bced/workwise.ui/src/assets/screenshots/workwise_update_dpt.png)
 
 ### Delete Department
-![Delete Department](path/to/delete-department-screenshot.png)
+![Delete Department](https://github.com/DhanushkKS/pacific_work_wise/blob/bf18faf7f7c9bd28cac52fcc9e1da8f7c505bced/workwise.ui/src/assets/screenshots/workwise_delete_dpt.png)
 
 ### Employee Creation Form
-![Employee Creation Form](path/to/employee-creation-form-screenshot.png)
+![Employee Creation Form](https://github.com/DhanushkKS/pacific_work_wise/blob/bf18faf7f7c9bd28cac52fcc9e1da8f7c505bced/workwise.ui/src/assets/screenshots/workwise_add_emp.png)
 
 ## Notes
 
 - **Age Calculation**: Employee age is calculated automatically based on the provided Date of Birth.
-- **Error Handling**: Proper error handling is implemented to ensure smooth user experience.
+- **Error Handling**: Proper error handling is implemented to ensure a smooth user experience.
 - **Validation**: All forms include validation for required fields and correct data formats.
 
 ## License

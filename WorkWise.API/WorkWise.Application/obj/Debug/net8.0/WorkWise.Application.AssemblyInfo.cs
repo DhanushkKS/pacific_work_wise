@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkWise.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9423a0a45c9275991be49a0766991fbe4128e20")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79592035482b9dee2ecc7969e66e36e21b396557")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkWise.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkWise.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

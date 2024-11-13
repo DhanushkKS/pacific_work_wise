@@ -6,6 +6,7 @@ import {
 } from "../../../redux/department/api.ts";
 import { formDetails } from "../common/formDetails.ts";
 import { useEffect, useState } from "react";
+import validationSchema from "../validationSchema/validationSchema.ts";
 
 const useUpdateDepartment = (id: string) => {
   const [isFormUpdated, setIsFormUpdated] = useState(false); // Track if the form is already updated with data
@@ -18,9 +19,9 @@ const useUpdateDepartment = (id: string) => {
       name: "",
     },
     onSubmit: async (values) => {
-      console.log(values);
       await updateDepartment({ id: id, department: values });
     },
+    validationSchema,
   });
 
   useEffect(() => {

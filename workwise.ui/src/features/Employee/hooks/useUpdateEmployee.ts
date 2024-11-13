@@ -7,6 +7,7 @@ import {
   useUpdateEmployeeMutation,
 } from "../../../redux/employee/api.ts";
 import { useEffect, useState } from "react";
+import validationSchema from "../validationSchema/validationSchema.ts";
 
 const useUpdateEmployee = (id: string) => {
   const [isFormUpdated, setIsFormUpdated] = useState(false); // Track if the form is already updated with data
@@ -25,7 +26,7 @@ const useUpdateEmployee = (id: string) => {
       salary: 0,
       departmentId: "",
     },
-
+    validationSchema,
     onSubmit: async (values) => {
       // Create a new object with the hardcoded dateOfBirth value
       const formattedValues = {

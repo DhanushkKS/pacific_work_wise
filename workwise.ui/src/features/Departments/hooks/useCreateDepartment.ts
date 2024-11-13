@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import generateInputField from "../../../helpers/generateInputField.tsx";
 import { useCreateDepartmentMutation } from "../../../redux/department/api.ts";
 import { formDetails } from "../common/formDetails.ts";
+import validationSchema from "../validationSchema/validationSchema.ts";
 
 const useCreateDepartment = () => {
   const [createDepartment, { isLoading }] = useCreateDepartmentMutation();
@@ -10,7 +11,7 @@ const useCreateDepartment = () => {
       name: "",
       code: "",
     },
-
+    validationSchema,
     onSubmit: async (values) => {
       await createDepartment(values);
     },

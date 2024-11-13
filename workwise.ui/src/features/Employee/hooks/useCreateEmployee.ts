@@ -3,6 +3,7 @@ import generateInputField from "../../../helpers/generateInputField.tsx";
 import { useGetAllDepartmentsQuery } from "../../../redux/department/api.ts";
 import { formDetails } from "../common/formDetails.ts";
 import { useCreateEmployeeMutation } from "../../../redux/employee/api.ts";
+import validationSchema from "../validationSchema/validationSchema.ts";
 
 const useCreateEmployee = () => {
   const { data } = useGetAllDepartmentsQuery({});
@@ -19,7 +20,7 @@ const useCreateEmployee = () => {
       salary: 0,
       departmentId: "",
     },
-
+    validationSchema,
     onSubmit: async (values) => {
       const formattedValues = {
         ...values,
